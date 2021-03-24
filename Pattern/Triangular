@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+void printPatt(int n)
+{
+  //int n;
+    //cin>>n;
+    int i=1;
+    int m=n;
+    while(i<=n)
+    {
+        char ch='A'+m-1;
+        int j=1;
+        while(j<=i)
+        {
+            char c = ch+j-1;
+            cout<<c;
+            j++;
+        }
+        i++;
+        m--;
+        cout<<endl;
+    }   //write your code here
+}
