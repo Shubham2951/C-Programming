@@ -1,0 +1,48 @@
+Problem:
+
+For a given a string(str), find and return the highest occurring character.
+
+Example:
+Input String: "abcdeapapqarr"
+Expected Output: 'a'
+Since 'a' has appeared four times in the string which happens to be the highest frequency character, the answer would be 'a'.
+
+******************************************************************************************************************************
+Program:
+
+// input - given string
+char highestOccurringChar(char input[]) {
+    // Write your code here
+int a[256];
+int p,s=0;
+    char z=input[0];
+    for(int i=0;i<256;i++)
+    {
+        a[i]=0;
+    }
+    
+   for(int i=0;input[i]!='\0';i++)
+   { 
+       p=input[i];
+       a[p]=a[p]+1;
+   }
+    s=a[z];
+    for(int i=1;input[i]!='\0';i++)
+   { 
+        if(a[input[i]]>s)
+        {
+            s=a[input[i]];
+            z=input[i];
+        }
+    }
+    return z;
+}
+
+
+******************************************************************************************************************************
+Output:
+
+Sample Input:
+abdefgbabfba
+Sample Output:
+b
