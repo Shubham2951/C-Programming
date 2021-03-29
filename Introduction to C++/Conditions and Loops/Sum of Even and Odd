@@ -1,0 +1,40 @@
+Problem:
+
+Write a program to input an integer N and print the sum of all its even digits and sum of all its odd digits separately.
+Digits mean numbers, not the places! That is, if the given integer is "13245", even digits are 2 & 4 and odd digits are 1, 3 & 5.
+
+************************************************************************************************************************************************
+Program:
+
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	int m,q,r;
+    cin>>m;
+    int sum_e=0, sum_o=0;
+    while(m!=0)
+    {
+        r=m%10;
+        if(r%2==0)
+            sum_e=sum_e+r;
+        else
+             sum_o=sum_o+r;
+        m=m/10;    
+    }
+    cout<<sum_e<<"   "<<sum_o;
+}
+
+************************************************************************************************************************************************
+Output:
+
+Sample Input:
+552245
+Sample Output:
+8 15
+
+Explanation:
+For the given input, the even digits are 2, 2 and 4 and if we take the sum of these digits it will come out to be 8(2 + 2 + 4)
+and similarly, if we look at the odd digits, they are, 5, 5 and 5 which makes a sum of 15(5 + 5 + 5). 
+Hence the answer would be, 8(evenSum) <single space> 15(oddSum)
