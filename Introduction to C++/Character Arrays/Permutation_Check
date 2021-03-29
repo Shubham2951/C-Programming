@@ -1,0 +1,64 @@
+Problem:
+
+For a given two strings, 'str1' and 'str2', check whether they are a permutation of each other or not.
+
+*************************************************************************************************************************
+Program:
+
+// input1 - first input string
+// input2 - second input string
+bool isPermutation(char input1[], char input2[]) {
+    // Write your code here
+    int flag=0,c1=0,c2=0,p,q;
+   int a[256];
+    for(int i=0;i<256;i++)
+    {
+        a[i]=0;
+    }
+    
+   for(int i=0;input1[i]!='\0';i++)
+   { 
+       c1++;
+       p=input1[i];
+       a[p]=a[p]+1;
+   }
+    for(int i=0;input2[i]!='\0';i++)
+    {
+        c2++;
+        q=input2[i];
+       a[q]=a[q]-1;
+
+    }
+         if(c1 != c2)
+         {
+             return false;
+         }
+       
+    else
+    {
+     for(int i=0;i<256;i++)
+      {
+         if(a[i]!=0)
+         {
+             return false;
+         }
+     }
+        return true;
+    
+    }
+}
+
+*************************************************************************************************************************
+Output:
+
+Sample Input:
+abcde
+baedc
+Sample Output:
+true
+
+Sample Input:
+abc
+cbd
+Sample Output:
+false
