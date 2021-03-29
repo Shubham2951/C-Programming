@@ -1,0 +1,46 @@
+Problem:
+
+Given a string, determine if it is a palindrome, considering only alphanumeric characters.
+
+*************************************************************************************************************
+Program:
+
+bool checkPalindrome(char str[]){
+  /* Don't write main().
+   *  Don't read input, it is passed as function argument.
+   *  Return output and don't print it.
+   *  Taking input and printing output is handled automatically.
+   */
+  int c=0;  
+    for(int i=0;str[i] !='\0';i++)
+  { 
+        c++;
+    }
+            
+   char str1[c];
+    int j=c-1;
+   for(int i=0;i<=c-1;i++)
+    {
+        str1[i]=str[j];
+        j--;
+    }
+    for(int i=0;i<c;i++)
+    {
+        if(str[i]!=str1[i])
+            return false;
+    }
+    return true;
+}
+
+*************************************************************************************************************
+Output:
+
+Sample Input:
+abcdcba
+Sample Output:
+true 
+
+Sample Input:
+coding
+Sample Output:
+false
