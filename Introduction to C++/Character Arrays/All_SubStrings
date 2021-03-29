@@ -1,0 +1,51 @@
+Substring:
+
+A substring is a contiguous sequence of characters within a string. 
+Example: "cod" is a substring of "coding". Whereas, "cdng" is not as the characters taken are not contiguous
+
+Problem:
+
+For a given input string(str), write a function to print all the possible substrings.
+
+
+************************************************************************************************************************
+Program:
+
+void printSubstrings(char str[]){
+  /* Don't write main().
+   *  Don't read input, it is passed as function argument.
+   * Print output as specified in the question.
+   */
+
+int i=0,j,k,l=0;
+    for(i=0;str[i]!='\0';i++)
+    {
+        l++;
+    }
+    
+    for(i=0;i<l;i++)
+    {
+        for(j=i;j<l;j++)
+        {
+            for(k=i;k<=j;k++)
+            {
+                cout<<str[k];
+            }
+            cout<<endl;
+        }
+    }
+}
+
+
+************************************************************************************************************************
+Output:
+
+Sample Input:
+abc
+Sample Output:
+a 
+ab 
+abc 
+b 
+bc 
+c 
