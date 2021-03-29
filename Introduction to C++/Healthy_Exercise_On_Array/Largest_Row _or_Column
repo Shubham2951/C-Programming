@@ -1,0 +1,58 @@
+Problem:
+
+For a given two-dimensional integer array/list of size (N x M),
+you need to find out which row or column has the largest sum(sum of all the elements in a row/column) 
+amongst all the rows and columns.
+
+***********************************************************************************************************************
+Program:
+
+void findLargest(int arr[][1000], int row, int col){
+
+
+  /* Don't write main().
+   *  Don't read input, it is passed as function argument.
+   * Print output as specified in the question.
+   */
+    int largest_r=0,largest_c=0,index=0,index_c=0;
+for(int i=0;i<row;i++)
+{  int sum_r=0;
+    for(int j=0;j<col;j++)
+    {
+        sum_r =sum_r +arr[i][j];
+        
+    }
+ if(sum_r>largest_r)
+        {largest_r = sum_r;
+        index =i;
+        }
+    
+}
+    for(int j=0;j<col;j++)
+    {  int sum_c =0;
+        for(int i=0;i<row;i++)
+        {
+            sum_c =sum_c + arr[i][j];
+            
+        }
+     if(sum_c>largest_c)
+           {  largest_c = sum_c;
+               index_c =j;
+             }
+    }
+if(largest_c > largest_r)
+    cout<<"column "<<index_c<<" "<<largest_c<<endl;
+    else
+        cout<<"row "<<index<<" "<<largest_r<<endl;
+    
+}
+
+***********************************************************************************************************************
+Output:
+
+Sample Input:
+2 2 
+1 1 
+1 1
+Sample Output:
+row 0 2
