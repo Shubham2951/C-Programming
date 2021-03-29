@@ -1,0 +1,38 @@
+Problem:
+Nth term of Fibonacci series F(n) is calculated using the following formula -
+    F(n) = F(n-1) + F(n-2), 
+    Where, F(1) = F(2) = 1
+    
+******************************************************************************************************************************
+Program:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+ int n;
+    cin>>n;
+    int a=1,b=1,c;
+    for(int i=3;i<=n;i++)
+    {
+       c=a+b; 
+        a=b;
+        b=c;
+        
+    }
+    cout<<c;
+}
+******************************************************************************************************************************
+Output:
+
+Sample Input:
+6
+Sample Output:
+8
+Explanation:
+Now the number is ‘6’ so we have to find the “6th” Fibonacci number
+So by using the property of the Fibonacci series i.e 
+[ 1, 1, 2, 3, 5, 8]
+So the “6th” element is “8” hence we get the output.
+
