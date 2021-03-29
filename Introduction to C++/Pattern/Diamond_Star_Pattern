@@ -1,0 +1,75 @@
+Problem:
+
+Write a Function to Print the following pattern for the given number of rows.
+Note: N is always odd.
+
+Pattern for N = 5
+  *
+ ***
+*****
+ ***
+  *
+  
+************************************************************************************************************************
+Program:
+
+void printPatt(int n)
+{
+       int i=1,j;
+   int m=((n/2)+1);
+    while(i<=m)
+    {
+        int space= 1;
+        while(space<=(m-i))
+        {
+            cout<<" ";
+            space ++;
+        }
+         j=1;
+        while(j<=i)
+        {
+            cout<<"*";
+            j++;
+        }
+        j=1;
+        while(j<i)
+        {
+            cout<<"*";
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    int p=m+1;
+    while(p<=n)
+    {
+        int space=1;
+        while(space<=(p-m))
+              {cout<<" ";
+              space++;}
+         j=1;
+         while(j<=(n-p+1))
+         {
+             cout<<"*";
+             j++;
+         }
+         j=1;
+         while(j<=(n-p))
+              {
+             cout<<"*";
+             j++;
+         }
+         cout<<endl;
+                p++;
+    }
+}
+
+************************************************************************************************************************
+Output:
+
+Sample Input:
+3
+Sample Output:
+  *
+ ***
+  *
