@@ -1,0 +1,51 @@
+Problem:
+
+Print the following pattern for the given N number of rows.
+Pattern for N = 4
+     1 
+    12
+   123
+  1234
+
+******************************************************************************************************************
+Program:
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+  int n;
+    cin>>n;
+    int i=1;
+    int spaces=1;
+    while(i<=n)
+    {
+        int spaces=1;
+        while(spaces<=n-i)
+        {
+            cout<<' ';
+            spaces++;
+        }
+        int j=1;
+        while(j<=i)
+        {
+            cout<<j;
+            j++;
+            
+        }
+        cout<<endl;
+        i++;
+    }
+}
+
+******************************************************************************************************************
+Output:
+
+Sample Input:
+3
+Sample Output:
+      1 
+     12
+    123
