@@ -1,0 +1,52 @@
+Problem:
+
+You are given an integer array/list(ARR) of size N. It contains only 0s, 1s and 2s. 
+Write a solution to sort this array/list in a 'single scan'.
+'Single Scan' refers to iterating over the array/list just once or to put it in other words, 
+you will be visiting each element in the array/list just once.
+
+*************************************************************************************************************
+Program:
+
+// arr - input array
+// n - size of array
+
+void sort012(int arr[], int n)  {  
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * No need to print or return the output.
+     * Taking input and printing output is handled automatically.
+     */
+    int ones=0,twos=0;
+for(int i=0;i<n;i++)
+{
+    if(arr[i]==1)
+    {
+        ones++;
+        arr[i]=0;
+    }
+    if(arr[i]==2)
+    {
+        twos++;
+        arr[i]=0;
+    }
+}
+    int k=n-(ones+twos);
+    for(;k<n;k++)
+    {
+        if(k<(n-twos))
+            arr[k]=1;
+        else
+            arr[k]=2;
+    }
+    
+}
+
+*************************************************************************************************************
+Output:
+
+Sample Input:
+7
+0 1 2 0 2 0 1
+Sample Output:
+0 0 0 1 1 2 2 
