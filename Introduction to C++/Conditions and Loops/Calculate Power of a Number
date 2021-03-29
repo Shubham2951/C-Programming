@@ -1,0 +1,32 @@
+Problem:
+
+Write a program to find x to the power n (i.e. x^n). Take x and n from the user. You need to print the answer.
+
+*******************************************************************************************************************************
+
+Program:
+
+#include<iostream>
+using namespace std;
+
+int main() {
+int x,n;
+    cin>>x>>n;
+    int i=1,res=1;
+    while(i<=n)
+    {
+        res= res*x;
+        i=i+1;
+    }
+    cout<<res;
+}
+
+*******************************************************************************************************************************
+
+Output:
+
+Sample Input:
+ 3 4
+Sample Output:
+81
+
