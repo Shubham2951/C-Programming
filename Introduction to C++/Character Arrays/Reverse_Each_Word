@@ -1,0 +1,48 @@
+Problem:
+
+Aadil has been provided with a sentence in the form of a string as a function parameter. 
+The task is to implement a function so as to print the sentence such that each word in the sentence is reversed.
+
+Example:
+Input Sentence: "Hello, I am Aadil!"
+The expected output will print, ",olleH I ma !lidaA".
+
+***********************************************************************************************************
+Program:
+
+// input - given string
+// Update in the given input itself. No need to return or print anything
+
+void reverseEachWord(char input[]) {
+    // Write your code here
+int i,j,k=0,temp,c=0;
+    for(i=0;input[i]!='\0';i++)
+    {
+        c++;
+    }
+    for(i=0;i<=c;i++)
+    { 
+        
+      if(input[i]==' '||input[i]=='\0')
+      {
+          j=i-1;
+          for(;k<j;k++)
+          {
+             temp=input[k];
+             input[k]=input[j];
+             input[j]=temp;
+             j--; 
+          }
+          k=i+1;
+      }
+    }
+}
+
+
+***********************************************************************************************************
+Output:
+
+Sample Input:
+Welcome to Coding Ninjas
+Sample Output:
+emocleW ot gnidoC sajniN
