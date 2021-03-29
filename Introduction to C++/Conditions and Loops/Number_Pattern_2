@@ -1,0 +1,76 @@
+Problem:
+
+Print the following pattern-
+Pattern for N = 4
+       1
+      23
+     345
+    4567
+    
+****************************************************************************************************************************
+Program:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+  int n,i=1,j,val,k;
+    cin>>n;
+    while(i<=n)
+    {
+        k=1;
+        while(k<=n-i)
+        {
+            cout<<" ";
+            k=k+1;
+        }
+        val=i;
+        j=1;
+        while(j<=i)
+        {
+            cout<<val;
+            val=val+1;
+            j=j+1;
+            
+        }
+        cout<<endl;
+        i=i+1;
+    }*/
+    int n;
+    cin>>n;
+    int i=1,k,val;
+    while(i<=n){
+        //int k=n-i;
+        k=1;
+        while(k<=n-i){
+            cout<<" ";
+            k++;
+        }
+        val=i;
+        int j=1;
+        while(j<=i)
+        {
+            cout<<val;
+            val++;
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    
+}
+
+Output:
+
+Sample Input:
+5
+Sample Output:
+          1
+         23
+        345
+       4567
+      56789
+
+
+    
