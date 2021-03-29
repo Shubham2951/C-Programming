@@ -1,0 +1,50 @@
+Problem:
+
+Given an input string S that contains multiple words, you need to remove all the spaces present in the input string.
+There can be multiple spaces present after any word.
+
+***************************************************************************************************************************************
+Program:
+
+void trimSpaces(char input[]) {
+  /*  Don't write main().
+   *  Don't read input, it is passed as function argument.
+   *  Don't print or return the output.
+   *  Change in the given input string itself.
+   *  Taking input and printing output is handled automatically.
+   */
+int i,j=0,c=0,s=0;
+    for(int i=0;input[i]!='\0';i++)
+    {
+        c++;
+    }
+    for(int i=0;input[i]!='\0';i++)
+    {
+       if(input[i]==' ')
+       {
+          s++;
+       }
+    }
+    for(i=0;input[i]!='\0';i++)
+    {
+        if(input[i]!=' ')
+        {
+            input[j]=input[i];
+            j=j+1;
+        }
+        if(j==(c-s))
+        {
+            input[j]='\0';
+            break;
+        }
+       
+    }
+}
+
+***************************************************************************************************************************************
+Output:
+
+Sample Input:
+abc def g hi
+Sample Output:
+abcdefghi
