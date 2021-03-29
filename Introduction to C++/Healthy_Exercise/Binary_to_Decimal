@@ -1,0 +1,31 @@
+Problem:
+
+Given a binary number as an integer N, convert it into decimal and print.
+
+*******************************************************************************************************************
+Program:
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+	int n,bin=0,i=0,m;
+    cin>>n;
+    while(n!=0)
+    {
+        m=n%10;
+        bin=bin+pow(2,i)*m;
+            i++;
+        n=n/10;
+    }
+    cout<<bin;
+}
+
+*******************************************************************************************************************
+Output:
+
+Sample Input:
+1100
+Sample Output:
+12
