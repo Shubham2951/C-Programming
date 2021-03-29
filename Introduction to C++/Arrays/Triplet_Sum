@@ -1,0 +1,80 @@
+Problem:
+
+You have been given a random integer array/list(ARR) and a number X. 
+Find and return the number of triplets in the array/list which sum to X.
+
+*****************************************************************************************************************
+Program:
+
+void FindTriplet(int arr[], int size, int x) {
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Print output and don't return it.
+     * Taking input is handled automatically.
+     */
+for(int i=0;i<size;i++)
+{
+    
+    for(int j=i+1;j<size;j++)
+    {
+      for(int k=j+1;k<size;k++)
+    {
+          if(x == arr[i]+arr[j]+arr[k])
+        {
+            if(arr[i]<=arr[j] && arr[i]<=arr[k])
+               {
+                   if(arr[j]<=arr[k])
+                   {cout<<arr[i]<<' '<<arr[j]<<' '<<arr[k]<<endl;}
+            
+               else
+               {cout<<arr[i]<<' '<<arr[k]<<' '<<arr[j]<<endl;}
+               }
+             else  if(arr[j]<=arr[i] && arr[j]<=arr[k])
+            {   
+                if(arr[i]<=arr[k])
+                {cout<<arr[j]<<' '<<arr[i]<<' '<<arr[k]<<endl;}
+            
+               else
+               {cout<<arr[j]<<' '<<arr[k]<<' '<<arr[i]<<endl;}
+                
+            }
+                else    if(arr[k]<=arr[i] && arr[k]<=arr[j])
+            {   
+                if(arr[i]<=arr[j])
+                {cout<<arr[k]<<' '<<arr[i]<<' '<<arr[j]<<endl;}
+            
+               else
+               {cout<<arr[k]<<' '<<arr[j]<<' '<<arr[i]<<endl;}
+                
+            }
+             
+            
+        }
+    }
+}
+
+}
+}
+
+*****************************************************************************************************************
+Output:
+
+Sample Input 1:
+7
+1 2 3 4 5 6 7 
+19
+Sample Input 2:
+9
+2 -5 8 -6 0 5 10 11 -3
+10
+Sample Output 1:
+0
+Sample Output 1:
+5
+
+
+Explanation:
+
+Since there doesn't exist any triplet with sum equal to 19 for the first query, we print 0.
+
+For the second query, we have 5 triplets in total that sum up to 10. They are, (2, 8, 0), (2, 11, -3), (-5, 5, 10), (8, 5, -3) and (-6, 5, 11)
